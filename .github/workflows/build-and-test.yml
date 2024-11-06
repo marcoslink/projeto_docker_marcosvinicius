@@ -26,8 +26,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./projeto_docker_marcosvinicius/atividade/backend
+        working-directory: projeto_docker_marcosvinicius/atividade/backend  # Removido o "./"
 
       - name: Run tests
         run: npm test
-        working-directory: ./projeto_docker_marcosvinicius/atividade/backend
+        working-directory: projeto_docker_marcosvinicius/atividade/backend  # Removido o "./"
