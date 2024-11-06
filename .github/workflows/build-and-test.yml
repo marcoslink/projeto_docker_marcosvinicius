@@ -22,8 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: projeto_docker_marcosvinicius/atividade/backend  # Especifica o diretório correto
+        working-directory: atividade/backend  # Corrigido para o caminho relativo dentro do repositório
 
       - name: Run tests
         run: npm test
-        working-directory: projeto_docker_marcosvinicius/atividade/backend  # Especifica o diretório correto
+        working-directory: atividade/backend  # Corrigido para o caminho relativo dentro do repositório
