@@ -1,0 +1,16 @@
+# Use a imagem oficial do MySQL
+FROM mysql:8.0
+
+# Defina variáveis de ambiente
+ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes
+ENV MYSQL_DATABASE=db_comex
+ENV MYSQL_USER=root
+
+
+# Copie o script SQL para o container, se houver
+# (substitua `init.sql` pelo nome do seu arquivo)
+# Este script será executado automaticamente na inicialização do container
+COPY ./atividade/backend/bancodedados/*.bancodedados /docker-entrypoint-initdb.d/
+
+# Exponha a porta padrão do MySQL
+EXPOSE 3306
